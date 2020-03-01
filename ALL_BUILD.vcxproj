@@ -14,22 +14,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{12F327C7-1401-3C2D-80EA-88EA01B05EA3}</ProjectGuid>
+    <ProjectGuid>{6D32168D-E6DA-3CE7-A120-3E542941B327}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>WIN32</Platform>
-    <ProjectName>DameDis</ProjectName>
+    <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -41,41 +41,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">D:\Documents\Code\DameEmu\DameDis\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">DameDis.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">DameDis</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">.exe</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">D:\Documents\Code\DameEmu\DameDis\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">DameDis.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">DameDis</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">.exe</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">true</GenerateManifest>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|WIN32'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Code\wxWidgets\lib\vc_lib\mswu;D:\Documents\Code\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <Optimization>Disabled</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_WXMSW_;_DEBUG;__WXDEBUG__;UNICODE;_UNICODE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_WXMSW_;__WXDEBUG__;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Code\wxWidgets\lib\vc_lib\mswu;D:\Documents\Code\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>D:\Documents\Code\wxWidgets\lib\vc_lib\mswu;D:\Documents\Code\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
@@ -84,42 +53,8 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Link>
-      <AdditionalDependencies>D:\Documents\Code\wxWidgets\lib\vc_lib\wxmsw31ud_core.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxbase31ud.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxpngd.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxtiffd.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxjpegd.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxzlibd.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxregexud.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxexpatd.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Documents/Code/DameEmu/DameDis/Debug/DameDis.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Documents/Code/DameEmu/DameDis/Debug/DameDis.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|WIN32'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Code\wxWidgets\lib\vc_lib\mswu;D:\Documents\Code\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <Optimization>MaxSpeed</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;_WXMSW_;_DEBUG;__WXDEBUG__;UNICODE;_UNICODE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;_WXMSW_;_DEBUG;__WXDEBUG__;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Code\wxWidgets\lib\vc_lib\mswu;D:\Documents\Code\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>D:\Documents\Code\wxWidgets\lib\vc_lib\mswu;D:\Documents\Code\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
@@ -128,19 +63,6 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Link>
-      <AdditionalDependencies>D:\Documents\Code\wxWidgets\lib\vc_lib\wxmsw31u_core.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxbase31u.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxpng.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxtiff.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxjpeg.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxzlib.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxregexu.lib;D:\Documents\Code\wxWidgets\lib\vc_lib\wxexpat.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Documents/Code/DameEmu/DameDis/Release/DameDis.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Documents/Code/DameEmu/DameDis/Release/DameDis.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="D:\Documents\Code\DameEmu\DameDis\CMakeLists.txt">
@@ -173,17 +95,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Documents\Code\DameEmu\DameDis\MainApp.cpp" />
-    <ClInclude Include="D:\Documents\Code\DameEmu\DameDis\MainApp.h" />
-    <ClCompile Include="D:\Documents\Code\DameEmu\DameDis\DisasmFrame.cpp" />
-    <ClInclude Include="D:\Documents\Code\DameEmu\DameDis\DisasmFrame.h" />
-    <ClCompile Include="D:\Documents\Code\DameEmu\DameDis\DisasmListCtrl.cpp" />
-    <ClInclude Include="D:\Documents\Code\DameEmu\DameDis\DisasmListCtrl.h" />
-    <ClCompile Include="D:\Documents\Code\DameEmu\DameDis\Disassembler.cpp" />
-    <ClInclude Include="D:\Documents\Code\DameEmu\DameDis\Disassembler.h" />
-    <ClInclude Include="D:\Documents\Code\DameEmu\DameDis\InstructionSet.h" />
-    <ClCompile Include="D:\Documents\Code\DameEmu\DameDis\Cartridge.cpp" />
-    <ClInclude Include="D:\Documents\Code\DameEmu\DameDis\Cartridge.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\Documents\Code\DameEmu\DameDis\ZERO_CHECK.vcxproj">
@@ -191,6 +102,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\Code\DameEmu\DameDis\DameDis.vcxproj">
+      <Project>{12F327C7-1401-3C2D-80EA-88EA01B05EA3}</Project>
+      <Name>DameDis</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
