@@ -1,5 +1,5 @@
 #include "MainApp.h"
-#include "MainFrame.h"
+#include "DisasmFrame.h"
 
 // Disable warning causes by wxWidget's implementation of WinMain
 #pragma warning(push)

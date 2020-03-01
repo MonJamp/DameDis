@@ -1,4 +1,4 @@
-#include "MainFrame.h"
+#include "DisasmFrame.h"
 #include "wx/wfstream.h"
 
 
